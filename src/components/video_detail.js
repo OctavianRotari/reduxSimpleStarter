@@ -5,7 +5,7 @@ const VideoDetail = ({video}) => {
     return(
       <div className="video-detail col-md-8">
         <div className="embed-responsive embed-responsive-16by9">
-          <iframe className="embed-responsive-item" src="#"><span>Loading....</span></iframe>
+          <span>Loading....</span>
         </div>
       </div>
     );
