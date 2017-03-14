@@ -9,15 +9,21 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <div className="col-md-8 form-group">
-        <input
-          className="form-control input-lg text-center"
-          value={ this.state.term }
-          onChange={event => this.setState({ term: event.target.value })}
-        />
-        <br />
+      <div className="col-md-12">
+        <div className="form-group search-bar">
+          <input
+            className="form-control input-md text-center"
+            value={ this.state.term }
+            onChange={event => this.onInputChange(event.target.value)}
+          />
+        </div>
       </div>
     );
+  }
+
+  onInputChange(term) {
+    this.setState({term})
+    this.props.onSearchTermChange(term);
   }
 }
 
